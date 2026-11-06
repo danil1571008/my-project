@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личная Библиотека</title>
+</head>
+<body>
+    <h1>Учёт личной библиотеки</h1>
+    
+    <form id="book-form">
+        <input type="text" id="title" placeholder="Название книги" required>
+        <input type="text" id="author" placeholder="Имя автора" required>
+        <input type="text" id="country" placeholder="Страна автора" required>
+        <input type="number" id="pages" placeholder="Кол-во страниц" required>
+        <button type="submit">Добавить книгу</button>
+    </form>
+
+    <h2>Список книг:</h2>
+    <div id="books-container"></div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

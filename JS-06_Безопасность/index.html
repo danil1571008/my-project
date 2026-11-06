@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Безопасный дневник питания</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <div class="container py-5" style="max-width: 650px;">
+        <h2 class="mb-4 text-center">🍎 Дневник питания и калорий</h2>
+
+        <!-- Форма добавления блюда -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Добавить прием пищи</h5>
+                <form id="foodForm" novalidate>
+                    <div class="mb-3">
+                        <label for="foodName" class="form-label">Название блюда (от 2 до 40 символов):</label>
+                        <input type="text" id="foodName" class="form-control" placeholder="Например: Куриное филе на гриле">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="calories" class="form-label">Калории (ккал на 100г):</label>
+                            <input type="text" id="calories" class="form-control" placeholder="От 1 до 900">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="weight" class="form-label">Вес порции (в граммах):</label>
+                            <input type="text" id="weight" class="form-control" placeholder="От 1 до 2000">
+                        </div>
+                    </div>
+                    
+                    <!-- Блок вывода ошибок валидации -->
+                    <div id="errorBlock" class="alert alert-danger d-none p-2 mb-3 small" role="alert"></div>
+
+                    <button type="submit" class="btn btn-success w-100">Внести в дневник</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Список съеденного за день -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title mb-0">Съедено за сегодня</h5>
+                    <span id="totalCaloriesBadge" class="badge bg-dark fs-6">Итого: 0 ккал</span>
+                </div>
+                <div id="foodContainer">
+                    <!-- Сюда JS выведет проверенные записи -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем логику как модуль -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
