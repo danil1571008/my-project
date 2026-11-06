@@ -1,0 +1,11 @@
+{
+  "name": "lab-8-orders",
+  "version": "1.0.0",
+  "main": "dist/orders.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

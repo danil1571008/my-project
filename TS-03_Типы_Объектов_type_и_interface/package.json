@@ -1,0 +1,11 @@
+{
+  "name": "lab-10-suppliers",
+  "version": "1.0.0",
+  "main": "dist/catalog.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
